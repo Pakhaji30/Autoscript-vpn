@@ -1,6 +1,7 @@
 #!/bin/bash
 # // config Data
 echo -e "${GREEN}Config Data${NC}"
+
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Pakhaji30/Autoscript-vpn/main/menu.sh"
 wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/add-ws.sh"
 wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/add-ssws.sh"
@@ -40,7 +41,7 @@ wget -q -O /usr/bin/fix "https://raw.githubusercontent.com/Azigaming404/Autoscri
 wget -q -O /etc/issue.net "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/issue.net"
 wget -q -O /root/versi "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/versibasic"
 wget -q -O /usr/bin/updatsc "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/update.sh"
-
+wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu-vmess.sh" && chmod 777 /usr/bin/menu-vmess
 chmod +x /usr/bin/menu
 chmod +x /usr/bin/add-ws
 chmod +x /usr/bin/add-ssws
