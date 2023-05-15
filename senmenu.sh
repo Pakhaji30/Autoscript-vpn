@@ -3,6 +3,7 @@ export GREEN='\033[0;32m'
 NC='\e[0m'
 # // config Data
 echo -e "${GREEN}Config Data${NC}"
+wget -q -O /user/bin/usernew "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu/usernew.sh"
 wget -q -O /user/bin/menu-ssh "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu-ssh.sh"
 wget -q -O /usr/bin/menuv "https://raw.githubusercontent.com/Pakhaji30
 /Xray-SSH/main/Menu%20Final/menuv.sh"
@@ -79,7 +80,7 @@ chmod +x /usr/bin/restartsc
 chmod +x /usr/bin/running
 chmod +x /usr/bin/cek-speed
 chmod +x /usr/bin/cek-trafik
-
+chmod 777 /user/bin/usernew
 echo "selesai bang"
 sleep 2
 cd
