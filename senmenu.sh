@@ -3,7 +3,8 @@ export GREEN='\033[0;32m'
 NC='\e[0m'
 # // config Data
 echo -e "${GREEN}Config Data${NC}"
-wget -q -O /usr/bin/menuv "https://raw.githubusercontent.com/andristji/Xray-SSH/main/Menu%20Final/menuv.sh"
+wget -q -O /usr/bin/menuv "https://raw.githubusercontent.com/Pakhaji30
+/Xray-SSH/main/Menu%20Final/menuv.sh"
 wget -q -O /usr/bin/addv "https://raw.githubusercontent.com/andristji/Xray-SSH/main/Menu%20Final/addv.sh"
 wget -q -O /usr/bin/cekv "https://raw.githubusercontent.com/andristji/Xray-SSH/main/Menu%20Final/cekv.sh"
 wget -q -O /usr/bin/delv "https://raw.githubusercontent.com/andristji/Xray-SSH/main/Menu%20Final/delv.sh"
