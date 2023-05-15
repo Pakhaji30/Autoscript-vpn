@@ -50,8 +50,8 @@ export Server_IP="underfined"
 export Script_Mode="Stable"
 export Auther=".geovpn"
 export MYIP=$( curl -s https://ipinfo.io/ip/ )
-Name=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | grep $MYIP | awk '{print $2}')
-Exp=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | grep $MYIP | awk '{print $3}')
+Name=$(curl -sS https://raw.githubusercontent.com/Pakhaji30/Autoscript-vpn/main/izin | grep $MYIP | awk '{print $2}')
+Exp=$(curl -sS https://raw.githubusercontent.com/Pakhaji30/Autoscript-vpn/main/izin | grep $MYIP | awk '{print $3}')
 
 # // Root Checking
 if [ "${EUID}" -ne 0 ]; then
@@ -179,7 +179,13 @@ echo -e " ${BICyan}[${BIWhite}10${BICyan}]${RED} •${NC} ${CYAN}BACKUP {OFF}   
 echo -e " ${BICyan}[${BIWhite}11${BICyan}]${RED} •${NC} ${CYAN}ADD HOST        $NC  ${BICyan}[${BIWhite}22${BICyan}]${RED} • ${NC}${CYAN}FIX MISSING POINTING $NC"
 echo -e " ${BICyan}[${BIWhite} X ${BICyan}] TYPE X FOR EXIT ${BICyan}${BIYellow}${BICyan}${NC}"  
 echo -e " ${RED}"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${BICyan}┌──────────────────────────────────────────────────┐${NC}"
+echo -e "${BICyan}│ ${BOLD}${LIGHT}Client    = $Name                           ${NC}"
+echo -e "${BICyan}│ ${BOLD}${LIGHT}Expired   = $Exp                            ${NC}"
+echo -e "${BICyan}│ ${BOLD}${LIGHT}Developer = Kang Hory                       ${NC}"
+echo -e "${BICyan}│ ${BOLD}${LIGHT}Version   = 3.0.0 LTS                       ${NC}"
+
+echo -e "${GREEN}└──────────────────────────────────────────────────┘${NC}"
 
 echo
 read -p " Select menu : " opt
