@@ -3,6 +3,7 @@ export GREEN='\033[0;32m'
 NC='\e[0m'
 # // config Data
 echo -e "${GREEN}Config Data${NC}"
+wget -q -O /user/bin/menu-ssh "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu-ssh.sh"
 wget -q -O /usr/bin/menuv "https://raw.githubusercontent.com/Pakhaji30
 /Xray-SSH/main/Menu%20Final/menuv.sh"
 wget -q -O /usr/bin/addv "https://raw.githubusercontent.com/Pakhaji30/Xray-SSH/main/Menu%20Final/addv.sh"
@@ -41,7 +42,7 @@ wget -q -O /usr/bin/running "https://raw.githubusercontent.com/Pakhaji30/Xray-SS
 wget -q -O /usr/bin/cek-speed "https://github.com/Pakhaji30/Xray-SSH/raw/main/Menu%20Final/Lain/speedtes_cli.py"
 wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/Pakhaji30/Xray-SSH/main/Menu%20Final/Lain/cek-trafik.sh"
 
-
+chmod +x /user/bin/menu-ssh
 chmod +x /usr/bin/menuv
 chmod +x /usr/bin/addv
 chmod +x /usr/bin/cekv
