@@ -1,4 +1,6 @@
 #!/bin/bash
+# // script credit by CyberVPN
+# // ini adalah script autoinstall ssh multiport untuk instalasi vpn server dan tunneling service
 MYIP=$(curl -sS ipv4.icanhazip.com)
 red='\e[1;31m'
 green='\e[0;32m'
@@ -35,8 +37,10 @@ sleep 2
 mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
 echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
 
-
-wget -q https://github.com/andristji/Xray-SSH/raw/main/tools.sh;chmod +x tools.sh;./tools.sh
+sudo at install squid -y
+sudo apt install net-tools -y
+sudo apt install vnstat -y
+wget -q https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/tools.sh && chmod +x tools.sh && ./tools.sh
 rm tools.sh
 clear
 
@@ -66,10 +70,10 @@ echo -e "$green      Install SSH / WS               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/andristji/Xray-SSH/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 sleep 2
 clear
-wget https://raw.githubusercontent.com/andristji/Xray-SSH/main/nginx-ssl.sh && chmod +x nginx-ssl.sh && ./nginx-ssl.sh
+wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/nginx-ssl.sh && chmod +x nginx-ssl.sh && ./nginx-ssl.sh
 
 
 #install ssh ovpn
@@ -78,14 +82,14 @@ echo -e "$green      Install Websocket              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/andristji/Xray-SSH/main/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Insshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 
 #exp
 cd /usr/bin
-wget -O xp "https://raw.githubusercontent.com/andristji/Xray-SSH/main/xp.sh"
+wget -O xp "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/xp.sh"
 chmod +x xp
 sleep 1
-wget -q -O /usr/bin/notramcpu "https://raw.githubusercontent.com/andristji/Xray-SSH/main/Menu%20Final/Lain/notramcpu" && chmod +x /usr/bin/notramcpu
+wget -q -O /usr/bin/notramcpu "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/Finaleuy/notramcpu" && chmod +x /usr/bin/notramcpu
 
 cd
 #remove log 
@@ -96,10 +100,23 @@ rm -f /root/insshws.sh
 rm -f /root/xraymode.sh
 
 #xray
-wget -q -O ins-xray.sh https://raw.githubusercontent.com/andristji/Xray-SSH/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green      Install Xray              $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 2
+wget -q -O ins-xray.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 sleep 1
 wget -q -O senmenu.sh https://raw.githubusercontent.com/andristji/Xray-SSH/main/senmenu.sh && chmod +x senmenu.sh && ./senmenu.sh
-wget -q -O slow.sh https://raw.githubusercontent.com/andristji/Xray-SSH/main/slow.sh && chmod +x slow.sh && ./slow.sh
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green      Install slowdns              $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 2
+wget -q -O slowdns.sh https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slow.sh && ./slowdns.sh
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green      Install openvpn              $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 2
+wget -q -O vpn.sh https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/vpn.sh && chmod 777 vpn.sh && ./vpn.sh
 #cronjob
 #echo "30 * * * * root removelog" >> /etc/crontab
 
@@ -137,22 +154,21 @@ if [ -f "/root/log-install.txt" ]; then
 rm -fr /root/log-install.txt
 fi
 cd
-echo "1.0.0" > versi
+echo "3.0.0" > versi
 clear
 rm -f ins-xray.sh
 rm -f senmenu.sh
 rm -f setupku.sh
 rm -f xraymode.sh
-rm -f slow.sh
-echo "Saya Bersaksi Bahwa Myoi Mina dari Twice Adalah Wanita Terindah di Dunia" > bacasaya
-echo "I Testify That Myoi Mina from Twice Is The Most Beautiful Woman in the World" > readme
-echo "=====================-[   THEMOON ]-===================="
+rm -f slowdns.sh
+
+echo "===============-[ Kang Hory VPN PREMIUM ]-================"
 echo ""
 echo "------------------------------------------------------------"
 echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 22, 53, 2222, 2269"  | tee -a log-install.txt
-echo "   - SSH Websocket           : 80" | tee -a log-install.txt
+echo "   - SSH Websocket           : 80,8880,8080" | tee -a log-install.txt
 echo "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
 echo "   - Stunnel5                : 222, 777" | tee -a log-install.txt
 echo "   - Dropbear                : 109, 143" | tee -a log-install.txt
@@ -166,6 +182,7 @@ echo "   - Trojan GRPC             : 443" | tee -a log-install.txt
 echo "   - Trojan WS               : 443" | tee -a log-install.txt
 echo "   - Trojan GO               : 443" | tee -a log-install.txt
 echo "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
+echo "   - slowdns                 : 443,80,8080,53,5300" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
@@ -187,13 +204,12 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script Nyolong By Themoon ]-==============="
+echo "===============-[ Script Credit By CyberVPN ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
 echo "ADIOS"
 sleep 1
-clear
 echo -ne "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "
 read answer
 if [ "$answer" == "${answer#[Yy]}" ] ;then
