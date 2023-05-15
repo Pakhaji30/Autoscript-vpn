@@ -20,7 +20,7 @@ wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/Azigaming40
 wget -q -O /usr/bin/cek-ram "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/ram.sh"
 wget -q -O /usr/bin/limit-speed "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/limit-speed.sh"
 wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu-vless.sh"
-wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu-vmess.sh"
+wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/Pakhaji30/Autoscript-vpn/main/menu-vmess.sh"
 #wget -q -O /usr/bin/menu-socks "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/menu-socks.sh"
 wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu-ss.sh"
 wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/Pakhaji30/Autoscript-vpn/main/menu-trojan.sh"
@@ -41,7 +41,6 @@ wget -q -O /usr/bin/fix "https://raw.githubusercontent.com/Azigaming404/Autoscri
 wget -q -O /etc/issue.net "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/issue.net"
 wget -q -O /root/versi "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/versibasic"
 wget -q -O /usr/bin/updatsc "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/update.sh"
-wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/menu-vmess.sh" && chmod 777 /usr/bin/menu-vmess
 chmod +x /usr/bin/menu
 chmod +x /usr/bin/add-ws
 chmod +x /usr/bin/add-ssws
