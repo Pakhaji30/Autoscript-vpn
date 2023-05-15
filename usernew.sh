@@ -21,28 +21,7 @@ export LIGHT='\033[0;37m'
 export NC='\033[0m'
 export ungu='\033[0;35m'
 
-# izin
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "memeriksa vps anda"
-sleep 0.5
-CEKEXPIRED () {
-        today=$(date -d +1day +%Y -%m -%d)
-        Exp1=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | grep $MYIP | awk '{print $3}')
-        if [[ $today < $Exp1 ]]; then
-        echo "status script aktif.."
-        else
-        echo "SCRIPT ANDA EXPIRED";
-        exit 0
-fi
-}
-IZIN=$(curl -sS https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/izin | awk '{print $4}' | grep $MYIP)
-if [ $MYIP = $IZIN ]; then
-echo "IZIN DI TERIMA!!"
-CEKEXPIRED
-else
-echo "Akses di tolak!! Benget sia hurung!!";
-exit 0
-fi
+
 
 # Getting
 
@@ -129,6 +108,6 @@ echo -e "Payload Websocket HTTP"
 echo -e "=================================================="
 echo -e "GET / HTTP/1.1[crlf]Host: [host][crlf]Upgrade: websocket[crlf][crlf]"
 echo -e "=================================================="
-echo -e "${CYAN}     Terimakasih sudah menggunakan" 
-echo -e "${CYAN}        script premium CyberVPN"
+echo -e "${CYAN}       Script Mod Kang Hory" 
+echo -e "${CYAN}        script by CyberVPN"
 echo -e "${LIGHT}=================================================="
